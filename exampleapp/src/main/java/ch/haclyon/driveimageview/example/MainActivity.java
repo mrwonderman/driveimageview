@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import ch.haclyon.driveimageview.example.dialogs.AboutDialog;
 import ch.haclyon.driveimageview.example.fragments.MainFragment;
 
 public class MainActivity extends Activity {
@@ -18,38 +19,34 @@ public class MainActivity extends Activity {
 
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         MainFragment mainFragment = new MainFragment();
-        fragmentTransaction.add(R.id.fragment_container, mainFragment);
+        fragmentTransaction.replace(R.id.fragment_container, mainFragment);
         fragmentTransaction.commit();
+
+        getActionBar().setDisplayHomeAsUpEnabled(false);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        if (id == android.R.id.home) {
-            FragmentManager fm = getFragmentManager();
-            if (fm.getBackStackEntryCount() > 0) {
-                fm.popBackStack();
-            }
-            return true;
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                FragmentManager fm = getFragmentManager();
+                if (fm.getBackStackEntryCount() > 0) {
+                    fm.popBackStack();
+                }
+                return true;
+            case R.id.menu_item_help:
+                AboutDialog aboutDialog = new AboutDialog(this);
+                aboutDialog.show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

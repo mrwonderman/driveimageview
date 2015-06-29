@@ -17,154 +17,159 @@
             android:layout_margin="16dp">
 
 
-            <Button
-                android:id="@+id/detail_animatebutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="animate me!"
-                android:layout_below="@+id/textView6"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="16dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/detail_driveImageView"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/detail_animatebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="animate"
+                    android:layout_below="@+id/textView6"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/detail_seekbar"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@+id/detail_seekbar"
+                    android:gravity="center_vertical"
+                    android:text="Opacity:"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true" />
+
+                <SeekBar
+                    android:id="@+id/detail_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/detail_folder" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/detail_folder"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/detail_seekbar"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Folder text:"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/detail_folder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignStart="@+id/detail_main"
+                    android:layout_below="@+id/detail_seekbar" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/detail_main"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/detail_main"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@+id/detail_main"
+                    android:gravity="center_vertical"
+                    android:text="Main text:"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/detail_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detail_folder"
+                    android:layout_toEndOf="@+id/textView" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height:"
+                    android:id="@+id/textView4"
+                    android:layout_below="@+id/textView2"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignBottom="@+id/detail_drive_height"
+                    android:layout_toStartOf="@+id/detail_main"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detail_drive_height"
+                    android:layout_below="@+id/detail_main"
+                    android:layout_alignStart="@+id/detail_main"
+                    android:layout_alignEnd="@+id/detail_main"
+                    android:layout_marginTop="8dp"
+                    android:indeterminate="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Width:"
+                    android:id="@+id/textView5"
+                    android:layout_below="@+id/textView4"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignBottom="@+id/detail_drive_width"
+                    android:layout_alignEnd="@+id/textView4"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detail_drive_width"
+                    android:layout_below="@+id/detail_drive_height"
+                    android:layout_alignStart="@+id/detail_drive_height"
+                    android:layout_alignParentEnd="true"
+                    android:indeterminate="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Corner:"
+                    android:id="@+id/textView6"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/detail_drive_width"
+                    android:layout_alignBottom="@+id/detail_drive_folder"
+                    android:layout_alignTop="@+id/detail_drive_folder"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detail_drive_folder"
+                    android:indeterminate="false"
+                    android:layout_below="@+id/detail_drive_width"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView6"
+                    android:layout_marginTop="8dp" />
+            </RelativeLayout>
 
             <ch.haclyon.driveimageview.DriveImageView
                 android:id="@+id/detail_driveImageView"
                 class="ch.haclyon.driveimageview.DriveImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_margin="8dp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/detail_seekbar"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/detail_driveImageView"
-                android:layout_marginRight="8dp"
-                android:layout_toStartOf="@+id/detail_seekbar"
-                android:gravity="center_vertical"
-                android:text="Opacity:"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textStyle="bold" />
-
-            <SeekBar
-                android:id="@+id/detail_seekbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/detail_folder"
-                android:layout_below="@+id/detail_driveImageView"
-                android:layout_toEndOf="@+id/detail_folder"
-                android:indeterminate="false" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/detail_folder"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/detail_seekbar"
-                android:layout_marginRight="8dp"
-                android:gravity="center_vertical"
-                android:text="Folder text:"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/detail_folder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignStart="@+id/detail_main"
-                android:layout_below="@+id/detail_seekbar" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/detail_main"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/detail_main"
-                android:layout_marginRight="8dp"
-                android:layout_toStartOf="@+id/detail_main"
-                android:gravity="center_vertical"
-                android:text="Main text:"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/detail_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/detail_folder"
-                android:layout_toEndOf="@+id/textView" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Height:"
-                android:id="@+id/textView4"
-                android:layout_below="@+id/textView2"
-                android:layout_alignParentStart="true"
-                android:layout_alignBottom="@+id/detail_drive_height"
-                android:layout_toStartOf="@+id/detail_main"
-                android:gravity="center_vertical"
-                android:layout_marginTop="8dp"
-                android:textStyle="bold" />
-
-            <SeekBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/detail_drive_height"
-                android:layout_below="@+id/detail_main"
-                android:layout_alignStart="@+id/detail_main"
-                android:layout_alignEnd="@+id/detail_main"
-                android:layout_marginTop="8dp"
-                android:indeterminate="false" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Width:"
-                android:id="@+id/textView5"
-                android:layout_below="@+id/textView4"
-                android:layout_alignParentStart="true"
-                android:layout_alignBottom="@+id/detail_drive_width"
-                android:layout_alignEnd="@+id/textView4"
-                android:gravity="center_vertical"
-                android:textStyle="bold" />
-
-            <SeekBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/detail_drive_width"
-                android:layout_below="@+id/detail_drive_height"
-                android:layout_alignStart="@+id/detail_drive_height"
-                android:layout_alignParentEnd="true"
-                android:indeterminate="false" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Corner:"
-                android:id="@+id/textView6"
-                android:gravity="center_vertical"
-                android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/detail_drive_width"
-                android:layout_alignBottom="@+id/detail_drive_folder"
-                android:layout_alignTop="@+id/detail_drive_folder"
-                android:textStyle="bold" />
-
-            <SeekBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/detail_drive_folder"
-                android:indeterminate="false"
-                android:layout_below="@+id/detail_drive_width"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/textView6"
-                android:layout_marginTop="8dp" />
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
     </ScrollView>

@@ -27,6 +27,20 @@ public class MainFragment extends Fragment {
     }
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);

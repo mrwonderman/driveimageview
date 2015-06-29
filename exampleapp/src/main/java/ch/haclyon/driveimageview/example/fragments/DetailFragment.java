@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 
-import ch.haclyon.driveimageview.example.R;
 import ch.haclyon.driveimageview.DriveImageModel;
 import ch.haclyon.driveimageview.DriveImageView;
+import ch.haclyon.driveimageview.example.R;
 
 public class DetailFragment extends Fragment {
     private static final String ARRAY_POS = "position";
@@ -49,6 +49,8 @@ public class DetailFragment extends Fragment {
         if (getArguments() != null) {
             arrayPosition = getArguments().getInt(ARRAY_POS);
         }
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override
