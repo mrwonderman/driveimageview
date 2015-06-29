@@ -10,10 +10,10 @@ import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-import ch.haclyon.driveimageview.example.fragments.DetailFragment;
-import ch.haclyon.driveimageview.example.fragments.MainFragment;
 import ch.haclyon.driveimageview.DriveImageModel;
 import ch.haclyon.driveimageview.DriveImageView;
+import ch.haclyon.driveimageview.example.fragments.DetailFragment;
+import ch.haclyon.driveimageview.example.fragments.MainFragment;
 
 
 public class DisplayItemAdapter extends ArrayAdapter<String> {
@@ -31,13 +31,13 @@ public class DisplayItemAdapter extends ArrayAdapter<String> {
         String desc = getItem(position);
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(ch.haclyon.driveimageview.example.R.layout.item, parent, false);
         }
 
         String ftext = "photo number " + (position + 1) + " of " + MainFragment.samplePictures.length;
         DriveImageModel m = new DriveImageModel(desc, ftext, MainFragment.samplePictures[position]);
 
-        DriveImageView view = (DriveImageView) convertView.findViewById(R.id.driveImageView);
+        DriveImageView view = (DriveImageView) convertView.findViewById(ch.haclyon.driveimageview.example.R.id.driveImageView);
         view.setDriveImageModel(m);
         view.setBackgroundColour(MainFragment.sampleColours[position]);
         view.setCustomFolderSpacing(100f);
@@ -48,7 +48,7 @@ public class DisplayItemAdapter extends ArrayAdapter<String> {
             public void onClick(View view) {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 DetailFragment detailFragment = DetailFragment.newInstance(position);
-                fragmentTransaction.replace(R.id.fragment_container, detailFragment);
+                fragmentTransaction.replace(ch.haclyon.driveimageview.example.R.id.fragment_container, detailFragment);
                 fragmentTransaction.addToBackStack("detail");
                 fragmentTransaction.commit();
             }

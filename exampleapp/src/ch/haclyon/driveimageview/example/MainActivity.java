@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
 
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         MainFragment mainFragment = new MainFragment();
-        fragmentTransaction.replace(R.id.fragment_container, mainFragment);
+        fragmentTransaction.replace(ch.haclyon.driveimageview.example.R.id.fragment_container, mainFragment);
         fragmentTransaction.commit();
 
         getActionBar().setDisplayHomeAsUpEnabled(false);
@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(ch.haclyon.driveimageview.example.R.menu.menu_main, menu);
         return true;
     }
 
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
                     fm.popBackStack();
                 }
                 return true;
-            case R.id.menu_item_help:
+            case ch.haclyon.driveimageview.example.R.id.menu_item_help:
                 AboutDialog aboutDialog = new AboutDialog(this);
                 aboutDialog.show();
                 return true;

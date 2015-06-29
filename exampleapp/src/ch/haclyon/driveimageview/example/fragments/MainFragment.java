@@ -46,7 +46,7 @@ public class MainFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         GridView gridView = (GridView) view.findViewById(R.id.gridView);
-        gridView.setAdapter(new DisplayItemAdapter(view.getContext(), new ArrayList<>(Arrays.asList(sampleTexts)), getFragmentManager()));
+        gridView.setAdapter(new DisplayItemAdapter(view.getContext(), new ArrayList<String>(Arrays.asList(sampleTexts)), getFragmentManager()));
 
         return view;
     }

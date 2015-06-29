@@ -92,7 +92,7 @@ public class DriveImageView extends RelativeLayout {
         animation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                setAlphaValue((float) valueAnimator.getAnimatedValue());
+                setAlphaValue((Float) valueAnimator.getAnimatedValue());
             }
         });
         animation.start();

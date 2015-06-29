@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class DriveImageViewLayout extends View {
 
-    private static Map<String, Integer> integerMap = new HashMap<>();
+    private static Map<String, Integer> integerMap = new HashMap<String, Integer>();
     private static int canvasWidth = 0;
     private static int canvasHeight = 0;
 
