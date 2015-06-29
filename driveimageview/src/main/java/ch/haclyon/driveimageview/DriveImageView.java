@@ -3,7 +3,6 @@ package ch.haclyon.driveimageview;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -100,7 +99,6 @@ public class DriveImageView extends RelativeLayout {
     }
 
     public void setCustomHeight(float customHeight) {
-        Log.i("asdf", "ch: " + driveImageModel.getMainTitle() + " h: " + imageView.getMeasuredHeight() + " w: " + imageView.getMeasuredWidth());
         driveLayout.setCustomHeight(customHeight);
         driveLayout.setImageViewHeight(imageView.getMeasuredHeight());
         driveLayout.setImageViewWidth(imageView.getMeasuredWidth());
@@ -120,7 +118,6 @@ public class DriveImageView extends RelativeLayout {
 
     @Override
     public void onWindowFocusChanged(boolean hasWindowFocus) {
-        Log.i("asdf", "h: " + imageView.getMeasuredHeight() + " w: " + imageView.getMeasuredWidth());
         driveLayout.setImageViewHeight(imageView.getMeasuredHeight());
         driveLayout.setImageViewWidth(imageView.getMeasuredWidth());
     }
