@@ -1,6 +1,6 @@
 driveimageview
 ==========================
-![three examples](images/header.jpg)
+![header](images/header.jpg)
 ## First things first
 
 You can find my blog post about the newest version here: [halcyon.ch - android-square-progressbar v.1.5.0] (http://www.halcyon.ch/android-square-progressbar-v-1-5-0/), also check out the post about the previous major 1.4.0 version [here](http://www.halcyon.ch/android-square-progressbar-v-1-4-0/).
@@ -17,6 +17,8 @@ The idea of this android library is to give the possibility to display two texts
 
 ### Examples
 Here are some examples of how these DriveImageView's could look like:
+
+![header](images/cover.png)
 
 ### How to use it? / How to contribute?
 Check the wiki for more information about [how to use](https://github.com/mrwonderman/driveimageview/wiki/Usage) and [how to contribute](https://github.com/mrwonderman/driveimageview/wiki/How-To-Contribute).
