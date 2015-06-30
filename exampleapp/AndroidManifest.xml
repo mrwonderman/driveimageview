@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="ch.haclyon.driveimageview.example">
+    package="ch.haclyon.driveimageview.example"
+    android:versionCode="2"
+    android:versionName="1.0.0" >
 
     <uses-sdk
         android:minSdkVersion="17"
