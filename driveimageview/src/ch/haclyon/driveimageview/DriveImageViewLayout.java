@@ -108,11 +108,11 @@ public class DriveImageViewLayout extends View {
         }
 
         if (customFolderSpacing == 0.0) {
-            this.customFolderSpacing = Float.valueOf(String.valueOf(imageViewWidth - (imageViewWidth / ((1 + Math.sqrt(5)) / 2))));
+            this.customFolderSpacing = (float) (imageViewWidth - (imageViewWidth / ((1 + Math.sqrt(5)) / 2)));
         }
 
         if (customHeight == 0.0) {
-            this.customHeight = Float.valueOf(String.valueOf(imageViewHeight - (imageViewHeight / ((1 + Math.sqrt(5)) / 2))));
+            this.customHeight = (float) (imageViewHeight - (imageViewHeight / ((1 + Math.sqrt(5)) / 2)));
         }
 
         canvas.drawRect(0, imageViewHeight - customHeight, canvasWidth, canvasHeight, backgroundPaint);
