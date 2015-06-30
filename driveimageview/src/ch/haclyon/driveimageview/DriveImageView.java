@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
  * The basic {@link DriveImageView}. This class includes all the methods you
  * need to modify your {@link DriveImageView}.
  *
- * @author ysigner
+ * @author Yannick Signer
  * @since 1.0.0
  */
 public class DriveImageView extends RelativeLayout {
@@ -25,7 +25,6 @@ public class DriveImageView extends RelativeLayout {
      *
      * @param context the {@link Context}
      * @author ysigner
-     * @since 1.0.0
      */
     public DriveImageView(Context context) {
         super(context);
@@ -37,7 +36,6 @@ public class DriveImageView extends RelativeLayout {
      *
      * @param context the {@link Context}
      * @param attrs   the {@link AttributeSet}
-     * @since 1.0.0
      */
     public DriveImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -50,7 +48,6 @@ public class DriveImageView extends RelativeLayout {
      * @param context      the {@link Context}
      * @param attrs        the {@link AttributeSet}
      * @param defStyleAttr the defStyleAttr
-     * @since 1.0.0
      */
     public DriveImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
@@ -61,7 +58,6 @@ public class DriveImageView extends RelativeLayout {
      * This initialises the main android widgets of the layout.
      *
      * @param context the {@link Context}
-     * @since 1.0.0
      */
     private void initialize(Context context) {
         LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -75,7 +71,6 @@ public class DriveImageView extends RelativeLayout {
      * Returns the current {@link DriveImageModel} from the {@link DriveImageView}.
      *
      * @return the current model.
-     * @since 1.0.0
      */
     public DriveImageModel getDriveImageModel() {
         return driveImageModel;
@@ -86,7 +81,6 @@ public class DriveImageView extends RelativeLayout {
      * This will cause the DriveImageView to redraw its figures and it also recalculates the size of the Canvas, because the size of the image can change.
      *
      * @param driveImageModel the {@link DriveImageModel}
-     * @since 1.0.0
      */
     public void setDriveImageModel(DriveImageModel driveImageModel) {
         this.driveImageModel = driveImageModel;
@@ -114,7 +108,6 @@ public class DriveImageView extends RelativeLayout {
      * Sets the background-color of the main figure on the canvas.
      *
      * @param backgroundColor the color as a Color-String. Using {@link android.graphics.Color#parseColor(String)}.
-     * @since 1.0.0
      */
     public void setBackgroundColor(String backgroundColor) {
         driveLayout.setBackgroundColour(backgroundColor);
@@ -124,7 +117,6 @@ public class DriveImageView extends RelativeLayout {
      * Sets the background-color of the divider figure.
      *
      * @param divideColor the color as a Color-String. Using {@link android.graphics.Color#parseColor(String)}.
-     * @since 1.0.0
      */
     public void setDivideColor(String divideColor) {
         driveLayout.setDivideColour(divideColor);
@@ -134,7 +126,6 @@ public class DriveImageView extends RelativeLayout {
      * Sets the text-color of both text's (main-text and folder-text)
      *
      * @param textColor the color as a Color-String. Using {@link android.graphics.Color#parseColor(String)}.
-     * @since 1.0.0
      */
     public void setTextColor(String textColor) {
         driveLayout.setTextColour(textColor);
@@ -144,7 +135,6 @@ public class DriveImageView extends RelativeLayout {
      * Sets the opacity value of all the figures on the canvas.
      *
      * @param alphaValue the opacity (alpha) value in float, between 0f and 1f.
-     * @since 1.0.0
      */
     public void setAlphaValue(float alphaValue) {
         driveLayout.setAlphaValue(alphaValue);
@@ -154,7 +144,6 @@ public class DriveImageView extends RelativeLayout {
      * Sets the {@link ImageView.ScaleType} onto the {@link ImageView}.
      *
      * @param scale the {@link ImageView.ScaleType}.
-     * @since 1.0.0
      */
     public void setImageScaleType(ImageView.ScaleType scale) {
         imageView.setScaleType(scale);
@@ -162,8 +151,6 @@ public class DriveImageView extends RelativeLayout {
 
     /**
      * This animates the text with a duration of 3 seconds.
-     *
-     * @since 1.0.0
      */
     public void animateText() {
         animateText(3000);
@@ -173,7 +160,6 @@ public class DriveImageView extends RelativeLayout {
      * This a animates a "blend-in" animation of the figure. The duration can be customised.
      *
      * @param duration The duration in milliseconds
-     * @since 1.0.0
      */
     public void animateText(int duration) {
         ValueAnimator animation = ValueAnimator.ofFloat(0f, 1f);
@@ -191,7 +177,6 @@ public class DriveImageView extends RelativeLayout {
      * Sets the custom height of the whole figure. This recalculates the text-sizes inside the Canvas.
      *
      * @param customHeight the desired height in dp.
-     * @since 1.0.0
      */
     public void setCustomHeight(float customHeight) {
         driveLayout.setCustomHeight(customHeight);
@@ -203,7 +188,6 @@ public class DriveImageView extends RelativeLayout {
      * Sets the spacing between the left border of the DriveImageView and the crack before the folder-text.
      *
      * @param customFolderSpacing the desired spacing in dp.
-     * @since 1.0.0
      */
     public void setCustomFolderSpacing(float customFolderSpacing) {
         driveLayout.setCustomFolderSpacing(customFolderSpacing);
@@ -213,7 +197,6 @@ public class DriveImageView extends RelativeLayout {
      * Returns the value of the folderCorner.
      *
      * @return the folderCorner value.
-     * @since 1.0.0
      */
     public float getFolderCorner() {
         return driveLayout.getFolderCorner();
@@ -223,7 +206,6 @@ public class DriveImageView extends RelativeLayout {
      * Sets the height and width of the folder corner.
      *
      * @param folderCorner height and width in dp.
-     * @since 1.0.0
      */
     public void setFolderCorner(float folderCorner) {
         driveLayout.setFolderCorner(folderCorner);

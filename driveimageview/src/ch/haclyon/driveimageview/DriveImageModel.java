@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 /**
  * This is the model for the DriveImageView which includes the the main-text, the folder-text and the image for the ImageView.
  *
- * @author yannick
+ * @author Yannick Signer
  * @since 1.0.0
  */
 public class DriveImageModel {
