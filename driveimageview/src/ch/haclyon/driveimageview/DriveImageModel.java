@@ -2,6 +2,12 @@ package ch.haclyon.driveimageview;
 
 import android.graphics.Bitmap;
 
+/**
+ * This is the model for the DriveImageView which includes the the main-text, the folder-text and the image for the ImageView.
+ *
+ * @author yannick
+ * @since 1.0.0
+ */
 public class DriveImageModel {
 
     private String mainTitle;
@@ -17,6 +23,13 @@ public class DriveImageModel {
         // nothing to do
     }
 
+    /**
+     * The main constructor of the model.
+     *
+     * @param mainTitle   the bigger title (main-text) on the bottom of the figure.
+     * @param folderTitle the smaller title under the divider on the top of the figure.
+     * @param drawable    the image as drawable.
+     */
     public DriveImageModel(String mainTitle, String folderTitle, int drawable) {
         this.mainTitle = mainTitle;
         this.folderTitle = folderTitle;
