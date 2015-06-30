@@ -60,7 +60,7 @@ public class DetailFragment extends Fragment {
 
         final DriveImageView imageView = (DriveImageView) view.findViewById(R.id.detail_driveImageView);
         imageView.setDriveImageModel(new DriveImageModel(MainFragment.sampleTexts[arrayPosition], "test", MainFragment.samplePictures[arrayPosition]));
-        imageView.setBackgroundColour(MainFragment.sampleColours[arrayPosition]);
+        imageView.setBackgroundColor(MainFragment.sampleColours[arrayPosition]);
         imageView.setCustomHeight(MainFragment.sampleHeights[arrayPosition]);
         imageView.setAlphaValue(OPACITY_SEEKBAR_PROGRESS / 100.0f);
 

@@ -39,7 +39,7 @@ public class DisplayItemAdapter extends ArrayAdapter<String> {
 
         DriveImageView view = (DriveImageView) convertView.findViewById(ch.haclyon.driveimageview.example.R.id.driveImageView);
         view.setDriveImageModel(m);
-        view.setBackgroundColour(MainFragment.sampleColours[position]);
+        view.setBackgroundColor(MainFragment.sampleColours[position]);
         view.setCustomFolderSpacing(100f);
         view.setAlphaValue(0.7f);
         view.setCustomHeight(MainFragment.sampleHeights[position]);

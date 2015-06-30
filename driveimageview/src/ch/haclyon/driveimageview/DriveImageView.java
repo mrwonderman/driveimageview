@@ -62,16 +62,16 @@ public class DriveImageView extends RelativeLayout {
 
     }
 
-    public void setBackgroundColour(String backgroundColour) {
-        driveLayout.setBackgroundColour(backgroundColour);
+    public void setBackgroundColor(String backgroundColor) {
+        driveLayout.setBackgroundColour(backgroundColor);
     }
 
-    public void setDevideColour(String devideColour) {
-        driveLayout.setDivideColour(devideColour);
+    public void setDivideColor(String divideColor) {
+        driveLayout.setDivideColour(divideColor);
     }
 
-    public void setTextColour(String textColour) {
-        driveLayout.setTextColour(textColour);
+    public void setTextColor(String textColor) {
+        driveLayout.setTextColour(textColor);
     }
 
     public void setAlphaValue(float alphaValue) {
