@@ -1,13 +1,13 @@
-driveimageview
+driveimageview [ ![Download](https://api.bintray.com/packages/mrwonderman/maven/driveimageview/images/download.svg) ](https://bintray.com/mrwonderman/maven/driveimageview/_latestVersion)
 ==========================
 ![header](images/header.jpg)
 ## First things first
 
-You can find my blog post about the newest version here: [halcyon.ch - android-square-progressbar v.1.5.0] (http://www.halcyon.ch/android-square-progressbar-v-1-5-0/), also check out the post about the previous major 1.4.0 version [here](http://www.halcyon.ch/android-square-progressbar-v-1-4-0/).
+You can find my blog post about the release here: [halcyon.ch - driveimageview release] (http://halcyon.ch/driveimageview-release/)
 
 The example application is available at the play store:
 
-<a href="https://play.google.com/store/apps/details?id=ch.halcyon.squareprogressbar.example">
+<a href="https://play.google.com/store/apps/details?id=ch.haclyon.driveimageview.example">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
 </a>
@@ -38,7 +38,7 @@ Then in your app build.gradle:
 
     dependencies {
         // other repos ...
-        compile 'ch.halcyon:driveimageview:0.0.1'
+        compile 'ch.halcyon:driveimageview:1.0.0'
     }
 
 ### Code
